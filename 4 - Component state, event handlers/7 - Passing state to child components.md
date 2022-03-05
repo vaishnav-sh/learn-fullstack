@@ -8,8 +8,8 @@
 
 This will be used to display the value of the counter.
 
-> **Note:**
-
+> **NOTE:**
+>
 > - It is recommended react that you **lift the state up** in the component heirarchy. The docs say:
 > - **"Often, several components need to reflect the same changing data. We recommend lifting the shared state up to their closest common ancestor."**
 
@@ -69,5 +69,5 @@ const App = () => {
 };
 ```
 
-- Since we now have an easily reusable Button component, we've also implemented new functionality into our application by adding a button that can be used to decrement the counter.
+- Since we now have an easily reusable `Button` component, we've also implemented new functionality into our application by adding a button that can be used to decrement the counter.
 - Here the event handler is passed with the help of a variable (which has a reference to the event hanlder function) to the `Button` component with prop name `onClick`.

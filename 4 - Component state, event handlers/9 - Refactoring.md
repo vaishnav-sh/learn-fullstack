@@ -1,6 +1,7 @@
 ## Refactoring
 
-In this section we will be refactoring already written code. This will be available in `counter final` file.
+In this section we will be refactoring already written code. This will be available in **`counter final` folder in the same directory**
+
 
 ### `Display` component
 

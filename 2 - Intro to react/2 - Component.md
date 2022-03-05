@@ -1,6 +1,6 @@
 ## Component
 
-The file App.js now defines a React component with the name App.
+The file App.js now defines a React component with the name `App`.
 
 - The last line in index.js renders its content into div-element defined in the file public/index.html, having the id value 'root'.
 - By default the file public/index.html doesn't contain any HTML markup that is visible to us in the browser. You can manually add it by adding to it.

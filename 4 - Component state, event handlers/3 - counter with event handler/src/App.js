@@ -34,12 +34,7 @@ const App = () => {
 
     </div >
 
-
-
-
-    // button that executes handleClick() on mouse click. 
     // the value of counter is increased by one and the component gets re-rendered on calling setCounter.
-    // Now lets add a button to reset the counter ***reset add***
   )
 }
 export default App

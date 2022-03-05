@@ -12,14 +12,16 @@ this would completely wreck our application:
 
 <img src="./Event handler error.png">
 
-**What's going on? An event handler is supposed to be either a function or a function reference, and when we write:**
+## **What's going on?**
+
+**An event handler is supposed to be either a function or a function reference, and when we write:**
 
 ```html
 <button onClick="{setCounter(counter" + 1)}></button>
 ```
 
-- **The event handler is actually a function call**
-- In many situations, this is okay but not in this situation
+- **Here, the event handler is actually a function call**
+- This means that the function doesn't wait for an event to occur, it will just call by itself.
 - In the beginning the value of the `counter` variable is 0. When React renders the component for the first time, it executes the function call `setCounter(0+1)`
 - This function call changes the value of the component's state to 1.
 - This will cause the component to be re-rendered, React will execute the `setCounter` function call again, and the state will change leading to another rerender...

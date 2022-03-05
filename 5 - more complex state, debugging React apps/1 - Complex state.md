@@ -103,14 +103,14 @@ const App = () => {
 - Here with `{...clicks, right: 1}`, a copy of `left` and `right` properties have been made using object spread `...clicks`. the copied `right` property is then updated to 1 or whatever the updation may be.
 - now this means the new object, `newClicks` will contain
 
-> **NOTE:** `...` operator should always be the first property, and then update it if needed.
-
 ```js
 {
   left: 0,
   right: clicks.right + 1,
 }
 ```
+
+> **NOTE:** `...` operator should always be the first property, and then update it if needed.
 
 - **creates a copy of the `clicks` object where the value of the `right` property is increased by one.**
 

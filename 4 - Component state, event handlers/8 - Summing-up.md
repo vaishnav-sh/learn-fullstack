@@ -21,3 +21,5 @@ Let's go over the main principles of how an application works once more.
 - So if a user clicks a button, event handler executes and changes the value of counter and the `App` component is re-rendered.
 
 - `Display` receives and renders new value of counter(using `props` argument) every time `App` component is re-rendered(whenever the state changes because of a button click)
+
+For the solution, **refer: `counter final` folder in the same directory**
