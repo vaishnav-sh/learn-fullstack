@@ -14,7 +14,7 @@ const App = (props) => {
 };
 ```
 
-- Let's change the component so that it stores a list of all the notes to be displayed in the notesToShow variable. The items of the list depend on the state of the component:
+- Let's change the component so that it stores a list of all the notes to be displayed in the `notesToShow` variable. The items of the list depend on the state of the component:
 
 ```js
 const App = (props) => {
@@ -44,7 +44,7 @@ const App = (props) => {
 
 - `notesToShow` is defined by using `conditional/ternary operator`. More on this [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-- If the value of showAll is false, the notesToShow variable will be assigned to a list that only contains notes that have the `important` property set to true. Filtering is done with the help of the array filter method:
+- If the value of `showAll` is false, the `notesToShow` variable will be assigned to a list that only contains notes that have the `important` property set to true. Filtering is done with the help of the array filter method:
 
 ```js
 notes.filter((note) => note.important === true);
