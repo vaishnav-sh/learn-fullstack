@@ -50,8 +50,8 @@ form.onsubmit = function (e) {
 };
 ```
 
-- document.getElementById('notes_form') instructs the code to fetch the form-element from the page, and to register an event handler to handle the form submit event.
-- the event handler immediately calls`e.preventDefault()` to prevent the default handling of form submit.
+- `document.getElementById('notes_form')` instructs the code to fetch the form-element from the page, and to register an event handler to handle the form submit event.
+- the event handler immediately calls `e.preventDefault()` to prevent the default handling of form submit.
 - The default method would send the data to the server and cause a new GET request, which we don't want to happen.
 - Then the event handler creates a new note, adds it to the notes list (empty array in js code) with the command `notes.push(note)`, rerenders the note list on the page and sends the new note to the server.
 - The code for sending the note to the server is as follows:

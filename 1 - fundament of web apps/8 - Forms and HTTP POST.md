@@ -17,7 +17,7 @@
   - getting JS code from main.js
   - and raw data of notes from data.json
 
-**The Form tag has attributes action and method, which define that submitting the form is done as an HTTP POST request to the address new_note.**
+**The Form tag has attributes `action` and `method`, which define that submitting the form is done as an HTTP POST request to the address new_note.**
 
 <img src="./Forms and HTTP POST 2.PNG">
 
@@ -37,8 +37,8 @@ app.post("/new_note", (req, res) => {
 Here,
 
 - Data is sent as the body of the POST-request.
-- The server can access the data by accessing the req.body field of the request object req.
-- The server creates a new note object, and adds it to an array called notes.
+- The server can access the data by accessing the req.body field of the request object `req`.
+- The server creates a new note object, and adds it to an array called `notes`.
 
 ```js
 notes.push({

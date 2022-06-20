@@ -70,4 +70,4 @@ const App = () => {
 ```
 
 - Since we now have an easily reusable `Button` component, we've also implemented new functionality into our application by adding a button that can be used to decrement the counter.
-- Here the event handler is passed with the help of a variable (which has a reference to the event hanlder function) to the `Button` component with prop name `onClick`.
+- Here the event handler is passed with the help of a variable (which has a reference to the event handler function) to the `Button` component with prop name `onClick`.

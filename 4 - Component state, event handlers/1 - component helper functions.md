@@ -60,4 +60,4 @@ const App = () => {
 ```
 
 - **The logic for guessing the year of birth is separated into a function of its own that is called when the component is rendered.**
-- Such kind of a function is called _componet helper_
+- Such kind of a function is called _component helper_

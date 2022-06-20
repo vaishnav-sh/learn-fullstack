@@ -154,8 +154,8 @@ const App = () => {
 
 - When the component is rendered, the thousand button is created:
 
-```html
-<button onClick="{setToValue(1000)}">thousand</button>
+```js
+<button onClick={setToValue(1000)}>thousand</button>
 ```
 
 - The event handler is set to the return value of setToValue(1000) which is the following function:
@@ -172,7 +172,7 @@ const App = () => {
 The increase button is declared as follows:
 
 ```html
-<button onClick="{setToValue(value" + 1)}>increment</button>
+<button onClick={setToValue(value + 1)}>increment</button>
 ```
 
 - The event handler is created by the function call `setToValue(value + 1)` which receives as its parameter the current value of the state variable value increased by one.

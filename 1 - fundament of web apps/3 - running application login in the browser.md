@@ -3,7 +3,7 @@
 - Open the notes page from the example
 - now you'll see `4 requests in the network tab` and all of them have different types
 - The first req type is document. it is the HTML Code of the page
-- it doesn't contain the lists because the lists because all that is coming from the main.js file
+- it doesn't contain the lists because all that is coming from the main.js file
 
 ```js
 var xhttp = new XMLHttpRequest(); // creates a new HTTP request
