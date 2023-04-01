@@ -90,3 +90,82 @@ In order to store the notes permanently, we need a database. Relational database
 
 - After the user account has been created and logged in, Let's start by choosing the free option suitable for trials
 
+- This will create Project zero and also cluster to get started with mongoDb. In addition to this, we have to define the IP addresses that are allowed access to the database. For the sake of simplicity we will allow access from all IP addresses:
+
+- Note: In case the modal menu is different for you, according to MongoDB documentation, adding 0.0.0.0 as an IP allows access from anywhere as well.
+
+- Finally, we are ready to connect to our database. Start by clicking connect and choose: Connect your application
+
+- The view displays the MongoDB URI , which is the address of the database that we will supply to the MongoDB client library we will add to our application. The address will look like this:
+```
+mongodb+srv://fullstack:<password>@cluster0.o1opl.mongodb.net/?retryWrites=true&w=majority
+```
+
+- We could use the database directly from our JavaScript code with the official MongoDB Node.js driver library, but it is quite cumbersome to use. We will instead use the Mongoose library that offers a higher-level API.
+
+```
+npm install mongoose
+```
+
+- Let's not add any code dealing with Mongo to our backend just yet. Instead, Let's make a practice application by creating a new file, mongo.js :
+
+```js
+const mongoose = require('mongoose')
+
+if (process.argv.length<3) {
+  console.log('give password as argument')
+  process.exit(1)
+}
+
+const password = process.argv[2]
+
+const url =
+  `mongodb+srv://fullstack:${password}@cluster0.o1opl.mongodb.net/?retryWrites=true&w=majority`
+
+mongoose.set('strictQuery',false)
+mongoose.connect(url)
+
+const noteSchema = new mongoose.Schema({
+  content: String,
+  important: Boolean,
+})
+
+const Note = mongoose.model('Note', noteSchema)
+
+const note = new Note({
+  content: 'HTML is Easy',
+  important: true,
+})
+
+note.save().then(result => {
+  console.log('note saved!')
+  mongoose.connection.close()
+})
+```
+
+- The code also assumes that it will be passed the password from the credentials we created in MongoDB Atlas, as a command line parameter. We can access the command line parameter like this:
+
+```js
+const password = process.argv[2]
+```
+
+- When the code is run with the command node mongo.js password, Mongo will add a new document to the database.
+
+><strong>NOTE</strong>: Please note the password is the password created for the database user, not your MongoDB Atlas password. Also, if you created a password with special characters, then you'll need to <a href="https://www.mongodb.com/docs/atlas/troubleshoot-connection/#special-characters-in-connection-string-password">URL encode</a> that password.
+
+
+- We can view the current state of the database from the MongoDB Atlas from Browse collections, in the Database tab.
+
+<img src="./collections.png" alt="mongodb.com collections tab inside cluster">
+
+- you can delete the `test` database and provide a custom name for the database from the connect url
+
+```
+const url =
+  `mongodb+srv://example:${password}@cluster0.o1opl.mongodb.net/noteApp?retryWrites=true&w=majority`
+```
+
+- the above will create a db with a name <strong>noteApp</strong>
+
+
+
