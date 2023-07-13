@@ -80,6 +80,6 @@ const toggleImportanceOf = (id) => {
 
 - When the error occurs we add a descriptive error message to the `errorMessage` state. At the same time, we start a timer, that will set the `errorMessage` state to null after five seconds.
 
-- The result looks like this:
+- The result looks like this -
 
 <img src="./notes styled.png">
