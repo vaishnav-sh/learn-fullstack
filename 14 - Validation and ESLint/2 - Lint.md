@@ -2,7 +2,7 @@
 
 Before we move on to the next part, we will take a look at an important tool called lint. Wikipedia says the following about lint:
 
->Generically, lint or a linter is any tool that detects and flags errors in programming languages, including stylistic errors. The term lint-like behavior is sometimes applied to the process of flagging suspicious language usage. Lint-like tools generally perform static analysis of source code.
+>Generically, lint or a linter is any tool that detects and flags errors in programming languages, including stylistic errors. The term lint-like behavior is sometimes applied to the process of flagging suspicious language usage. Lint-like tools generally perform static analysis of the source code.
 
 - In compiled statically typed languages like Java, IDEs like NetBeans can point out errors in the code, even ones that are more than just compile errors. Additional tools for performing <a href="https://en.wikipedia.org/wiki/Static_program_analysis">static analysis</a> like <a href="https://checkstyle.sourceforge.io/">checkstyle</a>, can be used for expanding the capabilities of the IDE to also point out problems related to style, like indentation.
 
